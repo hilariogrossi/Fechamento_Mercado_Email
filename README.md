@@ -1,1 +1,1 @@
-# Fechamento_Mercado_Email
+# Relatório de fechamento de mercado por e-mail

@@ -211,3 +211,35 @@ Hilário Grossi de Oliveira.
 
 
 ''')
+
+with open('Ibovespa-Fechamento.png', 'rb') as content_file:
+    content = content_file.read()
+    msg.add_attachment(content, maintype='application', subtype='png', filename='Ibovespa-Fechamento.png')
+
+with open('ITSA4-Fechamento.png', 'rb') as content_file:
+    content = content_file.read()
+    msg.add_attachment(content, maintype='application', subtype='png', filename='ITSA4-Fechamento.png')
+
+with open('Dólar-Fechamento.png', 'rb') as content_file:
+    content = content_file.read()
+    msg.add_attachment(content, maintype='application', subtype='png', filename='Dólar-Fechamento.png')
+
+with open('NASDAQ-Fechamento.png', 'rb') as content_file:
+    content = content_file.read()
+    msg.add_attachment(content, maintype='application', subtype='png', filename='NASDAQ-Fechamento.png')
+
+with open('DowJones-Fechamento.png', 'rb') as content_file:
+    content = content_file.read()
+    msg.add_attachment(content, maintype='application', subtype='png', filename='DowJones-Fechamento.png')
+
+with open('S&P_500-Fechamento.png', 'rb') as content_file:
+    content = content_file.read()
+    msg.add_attachment(content, maintype='application', subtype='png', filename='S&P_500-Fechamento.png')
+
+with open('Treasury_Yield_10_Years-Fechamento.png', 'rb') as content_file:
+    content = content_file.read()
+    msg.add_attachment(content, maintype='application', subtype='png', filename='Treasury_Yield_10_Years-Fechamento.png')
+
+with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+    smtp.login(email, senha)
+    smtp.send_message(msg)
